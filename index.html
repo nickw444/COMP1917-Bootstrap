@@ -28,9 +28,107 @@
       </header>
       <section>
         <h1>
-<a id="comp1917-bootstrap" class="anchor" href="#comp1917-bootstrap" aria-hidden="true"><span class="octicon octicon-link"></span></a>COMP1917-Bootstrap</h1>
+<a id="welcome-to-comp1917" class="anchor" href="#welcome-to-comp1917" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome To COMP1917</h1>
 
-<p>Get started with C in UNSW COMP1917 using Vagrant!</p>
+<p>Get programming in less than 10 minutes</p>
+
+<h2>
+<a id="what-is-this" class="anchor" href="#what-is-this" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is this</h2>
+
+<p>This repository is designed to help new programmers get up and programming in a matter of minutes. Over the years, I've seen some interesting things COMP1917 students do to program on their own computers, which only makes the development process really hard. These include:</p>
+
+<ul>
+<li>Editing code on your local machine, uploading code to CSE servers, compiling and running on CSE servers.</li>
+<li>Editing code on CSE servers using Nano, compiling on CSE servers, running on CSE servers. </li>
+<li>Editing code on a Windows or OSX machine in a GUI Text Editor, drag and dropping files into a Ubuntu virtual machine, compiling within</li>
+</ul>
+
+<p>There are many more weird things I've seen people do, none of which are required.</p>
+
+<h2>
+<a id="introducing-vagrant" class="anchor" href="#introducing-vagrant" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introducing Vagrant</h2>
+
+<p>Vagrant is a tool which takes care of provisioning virtual machines. Vagrant is able to create a virtual machine, share folders between the host, and provide easy ways to connect to it. </p>
+
+<p>This repository has the following goals:</p>
+
+<ul>
+<li>Setup a headless virtual machine (Ubuntu 15)</li>
+<li>Shares the folder "./work" into the directories ~/ and /work</li>
+<li>Installs commonly used tools, including gcc, gdb and valgrind.</li>
+</ul>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>You only need to follow these steps once for every computer you work on. </p>
+
+<h3>
+<a id="1-install-virtualbox-on-your-computer" class="anchor" href="#1-install-virtualbox-on-your-computer" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Install Virtualbox on your computer.</h3>
+
+<p><a href="https://www.virtualbox.org/wiki/Downloads">Download and install Virtualbox</a> on your computer. 
+Vagrant uses Virtualbox as the backend hypervisor. </p>
+
+<h3>
+<a id="2-install-vagrant-on-your-computer" class="anchor" href="#2-install-vagrant-on-your-computer" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Install Vagrant on your computer</h3>
+
+<p>Head on over to the <a href="https://www.vagrantup.com/downloads.html">Vagrant downloads page</a> and 
+pick up the latest copy of Vagrant. </p>
+
+<h3>
+<a id="3-there-is-no-step-3-youre-done-continue-onto-the-using-vagrant-section" class="anchor" href="#3-there-is-no-step-3-youre-done-continue-onto-the-using-vagrant-section" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. There is no step 3. You're done. Continue onto the "Using Vagrant" section</h3>
+
+<h2>
+<a id="using-vagrant" class="anchor" href="#using-vagrant" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using Vagrant</h2>
+
+<h3>
+<a id="1-power-on-the-machine" class="anchor" href="#1-power-on-the-machine" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Power on the Machine</h3>
+
+<p>Open a terminal. Type:</p>
+
+<pre><code>cd &lt;path/to/the/directory/of/this/repository&gt;
+</code></pre>
+
+<p>You must replace the <code>&lt;path/to/the/directory...</code> with the path where you downloaded 
+this repository to. </p>
+
+<p>Type:</p>
+
+<pre><code>vagrant up
+</code></pre>
+
+<p>If this is the first time <code>vagrant up</code> is being run, it may take a bit longer, because it's performing
+some machine provisioning.</p>
+
+<p>Note: You only need to perform <code>vagrant up</code> if you have restarted your computer, or explicitly ran 
+<code>vagrant destroy</code> or <code>vagrant halt</code>. </p>
+
+<h3>
+<a id="2-connect-to-the-machine" class="anchor" href="#2-connect-to-the-machine" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Connect to the machine</h3>
+
+<p>In the same terminal, type</p>
+
+<pre><code>vagrant ssh
+</code></pre>
+
+<p>You now have an open terminal session within the vagrant machine. Any work you perform in the folder /work 
+or your home directory should by synced to your local machine.</p>
+
+<p>It might even be worthwhile syncing the "./work" directory on your host with dropbox if you have multiple computers.</p>
+
+<h2>
+<a id="using-vagrant-video" class="anchor" href="#using-vagrant-video" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using Vagrant Video!</h2>
+
+<p>Coming Soon!</p>
+
+<h2>
+<a id="faq" class="anchor" href="#faq" aria-hidden="true"><span class="octicon octicon-link"></span></a>FAQ</h2>
+
+<h4>
+<a id="i-need-the-ip-address-of-the-machine-how-do-i-do-that" class="anchor" href="#i-need-the-ip-address-of-the-machine-how-do-i-do-that" aria-hidden="true"><span class="octicon octicon-link"></span></a>I need the IP address of the machine. How do I do that?</h4>
+
+<h4>
+<a id="i-want-root-access-how-do-i-do-that" class="anchor" href="#i-want-root-access-how-do-i-do-that" aria-hidden="true"><span class="octicon octicon-link"></span></a>I want root access, how do I do that?</h4>
       </section>
     </div>
     <footer>
